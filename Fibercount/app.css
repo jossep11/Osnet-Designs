@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Secular One", sans-serif;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  background: #0a0a23;
+  color: #fff;
+}
+p {
+  margin: 0;
+}
+.drag-area {
+  background-color: #1f1f42;
+  border: 2px dashed #fff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drag-area.active {
+  border: 2px solid #fff;
+}
+.drag-area .icon {
+  font-size: 40px;
+  color: #fff;
+}
+.icon {
+  font-size: 40px;
+  color: #fff;
+}
+.pick-file {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.drag-area header {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+.drag-area span {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+.drag-area button {
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.boxes1 {
+  background-color: #1f1f42;
+  border-radius: 5px;
+}
+.box-size {
+  height: 20vh;
+}
+.main-box-size {
+  min-height: calc(60vh - 4rem);
+  transition: all 0.5s ease;
+}
+.main-box-size-2 {
+  height: calc(40vh - 1.5rem);
+  overflow: auto;
+  transition: all 0.5s ease;
+}
+
+.user-size {
+  min-height: calc(20vh - 4rem);
+}
+.drag-size {
+  /* height: 70vh; */
+  min-height: calc(80vh - 1.5rem);
+  transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 767px) {
+  .grafica_mq {
+    margin-top: 2rem;
+  }
+  .drag-size {
+    min-height: 15rem;
+  }
+  .main-box-size {
+    min-height: auto;
+  }
+  .main-box-size-2 {
+    height: calc(70vh - 1.5rem);
+    overflow: auto;
+  }
+}
+.files-to-pick {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  flex-shrink: 1;
+}
+
+.testx {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="text"],
+select {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 4px 4px;
+}
+
+.Search {
+  gap: 10px;
+}

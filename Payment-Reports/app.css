@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Secular One", sans-serif;
+}
+
+/* --main-bg-color: #172646; */
+/* --card-bg-color: #0e0f11e1; */
+:root {
+  --main-bg-color: #101010;
+  --card-bg-color: #1b1b1d;
+}
+body {
+  display: flex;
+  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh;
+  background: var(--main-bg-color);
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+p {
+  margin: 0;
+}
+
+.drag-area.active {
+  border: 2px solid #fff;
+}
+.drag-area .icon {
+  font-size: 40px;
+  color: #fff;
+}
+.icon {
+  font-size: 40px;
+  color: #fff;
+}
+.pick-file {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.drag-area header {
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+.drag-area span {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+button {
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255);
+  color: #000;
+  box-shadow: 0 8px 32px 0 rgba(19, 19, 19, 0.37);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.boxes1 {
+  border-radius: 5px;
+  background-color: var(--card-bg-color);
+  box-shadow: 0 5px 12px 0 rgba(57, 92, 92, 0.212);
+}
+.box-size {
+  height: 20vh;
+}
+
+.user-circle {
+  background: var(--card-bg-color);
+  /* padding: 2rem; */
+  box-shadow: 0 8px 32px 0 rgba(57, 92, 92, 0.212);
+
+  height: 6.5rem;
+  width: 6.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.main-box-size {
+  /* overflow: hidden; */
+  height: 60vh;
+  transition: all 0.5s ease;
+}
+.main-box-size-2 {
+  height: calc(40vh - 1.5rem);
+  overflow: auto;
+  transition: all 0.5s ease;
+}
+
+.user-size {
+  min-height: calc(20vh - 4rem);
+}
+.drag-size {
+  /* height: 70vh; */
+  min-height: calc(80vh - 1.5rem);
+  transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 767px) {
+  .grafica_mq {
+    margin-top: 2rem;
+  }
+  .drag-size {
+    min-height: 15rem;
+  }
+  .main-box-size {
+    min-height: auto;
+  }
+  .main-box-size-2 {
+    height: calc(70vh - 1.5rem);
+    overflow: auto;
+  }
+}
+.files-to-pick {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  flex-shrink: 1;
+}
+
+.testx {
+  display: flex;
+  justify-content: space-around;
+}
+
+input[type="text"],
+select {
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  padding: 4px 4px;
+}
+
+.Search {
+  gap: 10px;
+}
+
+/* .chartBox {
+  max-height: 200px;
+  max-width: 200px;
+} */
