@@ -118,7 +118,8 @@ button {
     min-height: 15rem;
   }
   .main-box-size {
-    min-height: auto;
+    min-height: 80vh;
+    overflow: hidden;
   }
   .main-box-size-2 {
     height: calc(70vh - 1.5rem);
@@ -147,8 +148,7 @@ select {
 .Search {
   gap: 10px;
 }
-
-/* .chartBox {
-  max-height: 200px;
-  max-width: 200px;
-} */
+canvas {
+  max-width: 50vh;
+  max-height: 50vh;
+}

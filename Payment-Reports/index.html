@@ -43,11 +43,9 @@
       <div class="row mb-5 mt-3">
         <div class="col-md-6">
           <div
-            class="main-box-size boxes1 d-flex align-items-center justify-content-center flex-column"
+            class="main-box-size boxes1 d-flex align-items-center justify-content-center"
           >
-            <div class="chartBox">
-              <canvas id="myChart2" width="200" height="200"></canvas>
-            </div>
+            <canvas id="myChart" height="400" width="500"></canvas>
           </div>
         </div>
 
@@ -55,7 +53,7 @@
           <div
             class="text-center boxes1 main-box-size d-flex align-items-center justify-content-center"
           >
-            <canvas id="myChart" class=""></canvas>
+            <canvas id="myChart2"></canvas>
           </div>
         </div>
 
@@ -79,49 +77,66 @@
       const myChart = new Chart(ctx, {
         type: "bar",
         data: {
-          labels: ["Paypal", "Check", "Cash", "Bnb", "Btc", "Eth"],
+          labels: ["Paypal", "Cheques", "Tarjetas", "Creditos"],
           datasets: [
             {
               label: "# of Votes",
-              data: [12, 19, 19, 5, 19, 19],
+              data: [12, 19, 10, 4],
               backgroundColor: gradientBg,
               // background: rgb(34,193,195);
               // background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-              borderColor: gradientBg,
-              borderWidth: 1,
+              hoverBorderWidth: 1,
+              borderColor: "#1b1b1d",
             },
           ],
         },
         options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-            },
-          },
+          responsives: true,
         },
       });
 
       const ctx2 = document.getElementById("myChart2").getContext("2d");
-      const gradientBg2 = ctx.createLinearGradient(0, 0, 0, 400);
-      gradientBg2.addColorStop(0, "#AAFFA9");
-      gradientBg2.addColorStop(0.7, "#11FFBD");
-      gradientBg2.addColorStop(1, "#AAFFA9");
+      //creating gradiente
+      //gradient#1
+      const PieGradientBg1 = ctx.createLinearGradient(0, 0, 0, 400);
+      PieGradientBg1.addColorStop(0, "#2980B9");
+      PieGradientBg1.addColorStop(0.7, "#6DD5FA");
+      PieGradientBg1.addColorStop(1, "#2980B9");
+      //gradient#2
+      const PieGradientBg2 = ctx.createLinearGradient(0, 0, 0, 400);
+      PieGradientBg2.addColorStop(0, "#FBD786");
+      PieGradientBg2.addColorStop(0.7, "#f7797d");
+      PieGradientBg2.addColorStop(1, "#FBD786");
 
-      // hoverGradient.addColorStop(0, "#1cefff");
-      // hoverGradient.addColorStop(0.7, "#c0c0aa");
-      // hoverGradient.addColorStop(1, "#1cefff");
+      const PieGradientBg3 = ctx.createLinearGradient(0, 0, 0, 400);
+      PieGradientBg3.addColorStop(0, "#8e9eab");
+      PieGradientBg3.addColorStop(0, "#eef2f3");
+      PieGradientBg3.addColorStop(1, "#8e9eab");
+
+      const PieGradientBg4 = ctx.createLinearGradient(0, 0, 0, 400);
+      PieGradientBg4.addColorStop(0, "#a8ff78");
+      PieGradientBg4.addColorStop(0, "#78ffd6");
+      PieGradientBg4.addColorStop(1, "#a8ff78");
 
       const myChart2 = new Chart(ctx2, {
         type: "pie",
         data: {
-          labels: ["Paypal", "Check"],
+          labels: ["Paypal", "Cheques", "Tarjetas", "Creditos"],
           datasets: [
             {
               label: "# of Votes",
-              data: [12, 19],
-              backgroundColor: gradientBg2,
+              data: [12, 19, 10, 10],
+              backgroundColor: [
+                PieGradientBg1,
+                PieGradientBg2,
+                PieGradientBg3,
+                PieGradientBg4,
+              ],
               // hoverBackgroundColor: hoverGradient,
-              borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
+              hoverBorderWidth: 5,
+              borderColor: "#1b1b1d",
+
+              // borderColor: ["rgba(255, 99, 132, 1)", "rgba(54, 162, 235, 1)"],
               options: {
                 responsives: true,
               },
