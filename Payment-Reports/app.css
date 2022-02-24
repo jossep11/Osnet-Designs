@@ -80,15 +80,16 @@ button {
   height: 20vh;
 }
 
-.user-circle {
+.user-size {
   background: var(--card-bg-color);
-  /* padding: 2rem; */
-  box-shadow: 0 8px 32px 0 rgba(57, 92, 92, 0.212);
 
-  height: 6.5rem;
-  width: 6.5rem;
-  border-radius: 50%;
+  height: 3rem;
+  width: 15rem;
+  border-radius: 20px;
   overflow: hidden;
+}
+.user-size shadow {
+  box-shadow: 0 8px 32px 0 rgba(57, 92, 92, 0.212);
 }
 .main-box-size {
   /* overflow: hidden; */
@@ -101,9 +102,9 @@ button {
   transition: all 0.5s ease;
 }
 
-.user-size {
+/* .user-size {
   min-height: calc(20vh - 4rem);
-}
+} */
 .drag-size {
   /* height: 70vh; */
   min-height: calc(80vh - 1.5rem);
@@ -151,4 +152,12 @@ select {
 canvas {
   max-width: 50vh;
   max-height: 50vh;
+}
+
+.border-radius-button {
+  border-radius: 20px;
+}
+
+p {
+  font-size: 20px;
 }
